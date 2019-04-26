@@ -4,7 +4,7 @@ import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:path/path.dart' show join;
 import 'package:path_provider/path_provider.dart';
-import 'new_post_activity.dart';
+import 'package:winter2019/screens/new_post_page.dart';
 import 'package:winter2019/models/post_model.dart';
 import 'package:path/path.dart';
 

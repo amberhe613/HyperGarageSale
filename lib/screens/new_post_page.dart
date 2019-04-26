@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:winter2019/models/post_model.dart';
-import 'post_photo_using_camera.dart';
-import 'borwse_posts_activity.dart';
+import 'package:winter2019/helper/post_photo_using_camera.dart';
+import 'package:winter2019/screens/borwse_posts_page.dart';
 import 'package:camera/camera.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -27,7 +27,7 @@ class NewPostActivity extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => BrowsePostsActivity()),
+                MaterialPageRoute(builder: (context) => BrowsePostsPage()),
               );
             },
           ),
@@ -170,7 +170,7 @@ class _NewPostState extends State<NewPostBody> {
       ));
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BrowsePostsActivity()),
+        MaterialPageRoute(builder: (context) => BrowsePostsPage()),
       );
     }
   }

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'new_post_activity.dart';
-import 'post_list.dart';
-import 'models/post_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import 'new_post_page.dart';
+import 'package:winter2019/widgets/post_list.dart';
+import '../models/post_model.dart';
 
-class BrowsePostsActivity extends StatelessWidget {
+
+class BrowsePostsPage extends StatelessWidget {
 
   Widget _buildPostList(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(

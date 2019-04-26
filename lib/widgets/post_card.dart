@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:winter2019/models/post_model.dart';
-import 'post_detail.dart';
+import 'package:winter2019/screens/post_detail_page.dart';
 
 class PostCard extends StatefulWidget {
   final Post post;

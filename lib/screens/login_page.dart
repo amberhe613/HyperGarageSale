@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'login_signup_page.dart';
-import 'auth.dart';
-import 'borwse_posts_activity.dart';
+import 'package:winter2019/helper/auth.dart';
+import 'package:winter2019/screens/borwse_posts_page.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({this.auth});
@@ -78,7 +78,7 @@ class _LoginPageState extends State<LoginPage> {
         break;
       case AuthStatus.LOGGED_IN:
         if (_userId.length > 0 && _userId != null) {
-          return new BrowsePostsActivity();
+          return new BrowsePostsPage();
         } else return _buildWaitingScreen();
         break;
       default:

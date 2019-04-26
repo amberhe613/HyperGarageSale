@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'auth.dart';
-import 'login_page.dart';
+import 'package:winter2019/helper/auth.dart';
+import 'package:winter2019/screens/login_page.dart';
 
 void main() {
   runApp(MaterialApp(
