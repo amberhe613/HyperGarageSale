@@ -4,8 +4,8 @@ class Post extends Model {
   String title;
   double price;
   String description;
-  List<String> imageUrls;
-  List<String> imagePaths;
+  List<dynamic> imageUrls;
+  List<dynamic> imagePaths;
   Post() {
     imageUrls = new List<String>();
     imagePaths = new List<String>();
@@ -27,4 +27,27 @@ class Post extends Model {
 
   // Then notify all the listeners.
   notifyListeners();
+
+  Post.map(dynamic obj) {
+    this.title = obj['title'];
+    this.price = obj['price'];
+    this.description = obj['description'];
+    this.imageUrls =  obj['imageUrls'];
+  }
+
+  Map<String, dynamic> toMap() {
+    var map = new Map<String, dynamic>();
+    map['title'] = title;
+    map['price'] = price;
+    map['description'] = description;
+    map['imageUrls'] = imageUrls;
+    return map;
+  }
+
+  Post.fromMap(Map<String, dynamic> map) {
+    this.title = map['title'];
+    this.price = map['price'];
+    this.description = map['description'];
+    this.imageUrls = map['imageUrls'];
+  }
 }

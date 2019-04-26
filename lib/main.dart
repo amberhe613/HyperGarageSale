@@ -1,6 +1,9 @@
-library lib;
 import 'package:flutter/material.dart';
+import 'auth.dart';
+import 'login_page.dart';
 
-import 'src/hyper_garage_sale.dart';
-
-void main() => runApp(MyApp());
+void main() {
+  runApp(MaterialApp(
+    home: new LoginPage(auth: new Auth())
+  ));
+}
